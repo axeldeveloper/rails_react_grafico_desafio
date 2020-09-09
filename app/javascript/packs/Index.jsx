@@ -10,11 +10,3 @@ import { BrowserRouter } from 'react-router-dom';
 document.addEventListener("DOMContentLoaded", () => {
   render(<App />, document.body.appendChild(document.createElement("div")));
 });
-
-/*
-ReactDOM.render((
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-), document.body.appendChild(document.createElement("div")));
-*/

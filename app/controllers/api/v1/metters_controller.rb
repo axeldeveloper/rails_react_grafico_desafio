@@ -1,23 +1,43 @@
 class Api::V1::MettersController < ApplicationController
-    # before_action :set_todo_item, only: [:show, :edit, :update, :destroy]
-  def index
-    metter = Metter.all.order(created_at: :desc)
-    #render json: metter
-    render json: metter, include: ['knowledge_areas', 'functional_areas']
-  end
-
-  def show
-    if metter
-      #render json: metter
-      render json: metter, include: ['knowledge_areas', 'functional_areas', 'profiles']
-    else
-      render json: metter.errors
+    
+    
+    def index
+        metter = Metter.all.order(created_at: :desc)
+        render json: metter, include: ['knowledge_areas', 'functional_areas', 'profiles']
     end
-  end
 
-  private
-  def metter
-    @metter ||= Metter.find(params[:id])
-  end
+    def show
+        if metter
+            render json: metter, include: ['knowledge_areas', 'functional_areas', 'profiles']
+        else
+            render json: metter.errors
+        end
+    end
+
+
+    def create
+        metter = Metter.create!(set_params)
+        if metter
+            render json: metter
+        else
+            render json: metter.errors
+        end
+    end
+
+    def destroy
+        metter&.destroy
+        render json: { message: 'Metter deleted!' }
+    end
+
+    
+    private
+    
+    def metter
+        @metter ||= Metter.find(params[:id])
+    end
+
+    def set_params
+        params.permit(:title, :active)
+    end
 
 end

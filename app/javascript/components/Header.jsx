@@ -32,7 +32,7 @@ class Header extends  React.Component {
       this.state = {
         links: [
           {path: "/",          text: "Home", isActive: true},
-          {path: "/recipes",   text: "Recipes", isActive: false},
+          {path: "/metters",   text: "Metters", isActive: false},
           {path: "/dashboard", text: "Dashboard", isActive: false},
         ]
       }

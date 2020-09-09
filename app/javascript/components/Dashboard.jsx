@@ -7,18 +7,12 @@ import { Chart } from "react-google-charts";
 function Dashboard() {
 
     const [hasError, setErrors]     = useState(false);
-    //const [competencias, setAreaCompetencia]     = useState({ knowledge:[] });
-    //const [funcionais, setAreaFuncional]     = useState({ funcional:[] });
-    //const [perfils, setAreaPerfil]     = useState({ perfil:[] });
-
-
     const [isLoading, setIsLoading] = useState(false);
-    
     const [dataCompetencia, setDataCompetencia] = useState([]);
     const [dataFuncional, setDataFuncional]     = useState([]);
     const [dataPerfil, setDataPerfil]           = useState([]);
     
-    //const label = [['Nome', 'Quantidade']];
+
     const chartDataCompetencias  = [['Nome', 'Quantidade']];
     const chartDataFuncionais  = [['Nome', 'Quantidade']];
     const chartDataProfiles  = [['Nome', 'Quantidade']];
@@ -60,9 +54,6 @@ function Dashboard() {
         },
     });
 
- 
-
-
     const url = "/api/v1/metters/show/3";
 
     async function fetchData() {
@@ -81,7 +72,7 @@ function Dashboard() {
                 setDataPerfil(chartDataProfiles)
                 
 
-            }).catch(err => setErrors(err));  
+        }).catch(err => setErrors(err));  
     };
 
     useEffect(() => {  fetchData(); }, []);
