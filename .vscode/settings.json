@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "./db/development.sqlite3",
+            "driver": "SQLite",
+            "name": "desafio",
+            "previewLimit": 50
+        }
+    ]
+}
