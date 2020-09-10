@@ -65,15 +65,15 @@ class Metters extends React.Component {
             <div className="py-5">
             <main className="container">
                 <div className="text-right mb-3">
-                <Link to="/metter" className="btn custom-button">
-                    Create New Metters
-                </Link>
+                    <Link to="/metter" className="btn custom-button">
+                        Create New Metters
+                    </Link>
                 </div>
                 <div className="row">
-                {metters.length > 0 ? allRecipes : noRecipe}
+                    {metters.length > 0 ? allRecipes : noRecipe}
                 </div>
                 <Link to="/" className="btn btn-link">
-                Home
+                    Home
                 </Link>
             </main>
             </div>

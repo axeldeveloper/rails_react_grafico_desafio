@@ -8,7 +8,7 @@ class Api::V1::MettersController < ApplicationController
 
     def show
         if metter
-            render json: metter, include: ['knowledge_areas', 'functional_areas', 'profiles']
+            render json: metter, include: ['knowledge_areas', 'functional_areas', 'profiles', 'circles', 'shifts']
         else
             render json: metter.errors
         end

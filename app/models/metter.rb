@@ -6,5 +6,9 @@ class Metter < ApplicationRecord
     has_many :functional_areas
 
     has_many :profiles
+
+    has_many :circles
+
+    has_many :shifts
     
 end

@@ -14,20 +14,20 @@
 
 
 KnowledgeArea_list = [
-  [ "Quantitativo", 1 ],
-  [ "Básico",       1 ],
-  [ "Complementar", 1 ],
-  [ "Técnico",      1 ],
+  [ "Ciclo I",   1 ],
+  [ "Ciclo II",  1 ],
+  [ "Ciclo III", 1 ],
+  [ "Ciclo IV",  1 ],
 
-  [ "Quantitativo", 2 ],
-  [ "Básico",       2 ],
-  [ "Complementar", 2 ],
-  [ "Técnico",      2 ],
+  [ "Ciclo I",   2 ],
+  [ "Ciclo II",  2 ],
+  [ "Ciclo III", 2 ],
+  [ "Ciclo IV",  2 ],
 
-  [ "Quantitativo", 3 ],
-  [ "Básico",       3 ],
-  [ "Complementar", 3 ],
-  [ "Técnico",      3 ]
+  [ "Ciclo I",   3 ],
+  [ "Ciclo II",  3 ],
+  [ "Ciclo III", 3 ],
+  [ "Ciclo IV",  3 ]
 ]
 
 KnowledgeArea_list.each do |title, metter|
@@ -35,7 +35,9 @@ KnowledgeArea_list.each do |title, metter|
   
   # FunctionalArea.create( title: title, metter_id: metter )
 
-  Profile.create( title: title, metter_id: metter )
+  # Profile.create( title: title, metter_id: metter )
+
+  Shift.create( title: title, total: 10, metter_id: metter )
 end
 
 

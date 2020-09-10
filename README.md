@@ -75,3 +75,7 @@ Projeto desafio Joinus.
 
 # Author
 ![Screenshot](screem/ax.jpg)
+
+
+rails g model Circle title:string total:integer metter:references
+rails g model Shift title:string total:integer metter:references
