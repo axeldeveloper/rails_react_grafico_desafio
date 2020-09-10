@@ -2,8 +2,12 @@
 
 Projeto desafio Joinus.
 
-# DEMO
+# Screem
 ![Screenshot](screem/react_rails.png)
+
+![Screenshot](screem/r1.png)
+
+![Screenshot](screem/r2.png)
 
 # Things you may want to cover:
 
@@ -77,5 +81,3 @@ Projeto desafio Joinus.
 ![Screenshot](screem/ax.jpg)
 
 
-rails g model Circle title:string total:integer metter:references
-rails g model Shift title:string total:integer metter:references
